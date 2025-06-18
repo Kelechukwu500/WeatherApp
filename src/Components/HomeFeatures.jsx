@@ -16,7 +16,7 @@ import WeatherRadar from "./WeatherRadar";
 
 
 const API_KEY = "312427829dfb46f0be0124156251505";
-const BASE_URL = "http://api.weatherapi.com/v1";
+const BASE_URL = "https://api.weatherapi.com/v1";
 
 const HomeFeatures = () => {
   const [city, setCity] = useState("New York");
