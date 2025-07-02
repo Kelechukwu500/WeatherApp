@@ -21,8 +21,8 @@ const Footer = () => {
 
       {/* Center: Copyright */}
       <span className="text-sm text-center mx-auto">
-        &copy; {new Date().getFullYear()} TrueWeather. Built By Kelechukwu
-        Ifeanyichukwu Aku
+        &copy; {new Date().getFullYear()} TrueWeather. Created by Kaycee Tech.
+
       </span>
 
       {/* Right: Back to Top */}
