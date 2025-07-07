@@ -22,8 +22,8 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="w-full bg-gray-800 text-white p-4 flex items-center justify-between relative">
-      {/* Left Section: Menu + Logo */}
+    <nav className="w-full bg-gray-800 text-white p-4 flex flex-col md:flex-row items-center justify-between relative gap-4">
+      {/* Top Left Section: Logo + Menu */}
       <div className="flex items-center space-x-4">
         <span className="text-white focus:outline-none">
           <FiMenu size={24} />
@@ -31,15 +31,15 @@ const Navbar = () => {
         <h1 className="text-xl font-semibold">WeatherApp</h1>
       </div>
 
-      {/* Center Section: Search Bar with white border and search icon */}
-      <div className="absolute left-1/2 transform -translate-x-1/2 hidden md:flex items-center border border-white rounded-md overflow-hidden">
+      {/* Search Bar: Visible on all screen sizes */}
+      <div className="flex items-center border border-white rounded-md overflow-hidden w-full max-w-md">
         <input
           type="text"
           placeholder="Search page..."
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           onKeyDown={handleKeyPress}
-          className="px-4 py-1 text-black focus:outline-none w-48"
+          className="px-4 py-1 text-black focus:outline-none w-full"
         />
         <button
           onClick={handleSearch}
@@ -49,8 +49,8 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* Right Section: Main Nav Links */}
-      <div className="hidden md:flex items-center space-x-6 mr-20">
+      {/* Right Section: Navigation Links */}
+      <div className="flex items-center space-x-6">
         <Link to="/" className="text-white hover:text-gray-300 transition">
           Home
         </Link>
