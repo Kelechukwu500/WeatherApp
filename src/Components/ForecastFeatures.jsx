@@ -141,8 +141,11 @@ const ForecastFeatures = () => {
       />
 
       <div className="relative z-10 forecast-page w-full p-6 max-w-7xl mx-auto">
-        <div className="absolute top-6 right-6 z-20">
-          <WindDirectionCompass windDir={windDir} windSpeed={windSpeed} />
+        {/* ✅ Adjusted Wind Compass */}
+        <div className="fixed bottom-4 right-4 z-20 md:absolute md:top-6 md:right-6 md:bottom-auto md:left-auto">
+          <div className="w-fit">
+            <WindDirectionCompass windDir={windDir} windSpeed={windSpeed} />
+          </div>
         </div>
 
         <h1 className="text-3xl font-bold mb-6 text-center text-white">
@@ -159,7 +162,6 @@ const ForecastFeatures = () => {
         <form
           className="flex flex-wrap justify-center mb-4 gap-2"
           onSubmit={handleSearch}
-          autoComplete="off"
         >
           <input
             type="text"
