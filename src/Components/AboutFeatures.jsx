@@ -18,19 +18,21 @@ const AboutFeatures = () => (
     </h2>
 
     <ul className="list-disc list-inside mb-4 text-gray-700 dark:text-gray-300">
-      <li>7-day weather forecast with temperature trends</li>
+      <li>3-day weather forecast with temperature trends</li>
       <li>Live weather radar visualization</li>
       <li>Save and manage favorite locations</li>
       <li>Switch between Celsius and Fahrenheit</li>
       <li>Search for cities worldwide</li>
       <li>Real-time weather updates</li>
       <li>Interactive temperature graph</li>
-      <li>
-        Detailed weather information (humidity, wind speed, sunrise & sunset
+      <li>Detailed weather information (humidity, wind speed, sunrise & sunset
         etc.)
       </li>
       <li>Background weather condition of cities</li>
       <li>Modern, responsive design</li>
+      <li>UV Index</li>
+      <li>Wind Compass</li>
+      <li>Weather Alerts</li>
     </ul>
 
     <h2 className="text-xl font-semibold mb-2 text-gray-800 dark:text-white">
