@@ -131,7 +131,7 @@ const Saved = ({ savedLocations = demoLocations }) => {
   );
 
   return (
-    <div className="saved-page w-full max-w-full px-4 py-6 sm:px-6 md:px-8 min-h-screen bg-gray-100 dark:bg-gray-900 px-4">
+    <div className="saved-page w-screen w-full max-w-full px-4 py-6 sm:px-6 md:px-8 min-h-screen bg-gray-100 dark:bg-gray-900 px-4">
       <h1 className="text-3xl font-extrabold mb-6 text-center text-gray-900 dark:text-white drop-shadow-md">
         Saved Locations
       </h1>
