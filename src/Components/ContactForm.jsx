@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { db } from "../firebase"; // Adjust the path based on your folder structure
+import { collection, addDoc, Timestamp } from "firebase/firestore";
 
 const ContactForm = () => {
   const [email, setEmail] = useState("");
@@ -10,7 +12,7 @@ const ContactForm = () => {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     let formErrors = {};
     let valid = true;
@@ -31,9 +33,19 @@ const ContactForm = () => {
     setErrors(formErrors);
 
     if (valid) {
-      setSuccess(true);
-      setEmail("");
-      setMessage("");
+      try {
+        await addDoc(collection(db, "messages"), {
+          email,
+          message,
+          createdAt: Timestamp.now(),
+        });
+        setSuccess(true);
+        setEmail("");
+        setMessage("");
+      } catch (error) {
+        console.error("Error saving message:", error);
+        setSuccess(false);
+      }
     } else {
       setSuccess(false);
     }
@@ -58,7 +70,7 @@ const ContactForm = () => {
 
       <textarea
         placeholder="Your message"
-        rows="3" /* Slightly increased */
+        rows="3"
         value={message}
         onChange={(e) => setMessage(e.target.value)}
         className={`w-full px-3 py-2 border rounded-md text-sm resize-none ${
