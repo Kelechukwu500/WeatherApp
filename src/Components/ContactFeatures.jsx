@@ -9,7 +9,7 @@ import {
 
 const ContactFeatures = () => {
   return (
-    <div className="min-h-screen px-4 py-10 bg-gray-100 dark:bg-gray-900">
+    <div className="w-screen min-h-screen px-4 py-10 bg-gray-100 dark:bg-gray-900">
       <h1 className="text-3xl text-center font-bold text-purple-700 dark:text-white mb-8">
         Contact Developer
       </h1>
