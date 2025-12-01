@@ -32,7 +32,7 @@ const Navbar = () => {
       </div>
 
       {/* Search Bar: Visible on all screen sizes */}
-      <div className="flex items-center border border-white rounded-md overflow-hidden w-full max-w-md">
+      <div className="flex items-center border border-white rounded-md overflow-hidden max-w-md">
         <input
           type="text"
           placeholder="Search page..."
@@ -49,8 +49,9 @@ const Navbar = () => {
         </button>
       </div>
 
+    
       {/* Right Section: Navigation Links */}
-      <div className="flex items-center space-x-6">
+      <div className="flex items-center space-x-6 md:mr-10">
         <Link to="/" className="text-white hover:text-gray-300 transition">
           Home
         </Link>
